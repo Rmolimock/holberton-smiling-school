@@ -304,3 +304,11 @@ a:hover {
  .prev-arrow-icon {
    display: none;
  }
+ .profile__pic__sm {
+   height: 4rem;
+   width: 4rem;
+   border-radius: 50%;
+ }
+ .primary {
+   color: var(--primary-light);
+ }
