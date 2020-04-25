@@ -96,6 +96,7 @@ a:hover {
 [data-section-theme="dark"], [data-section-theme="dark"] {
   --text-color: var(--color-white);
   --title-text-color: var(--color-white);
+  background-color: var(--primary-dark);
 }
 
 /* ============== ||                 -- DESKTOP *\
@@ -311,4 +312,7 @@ a:hover {
  }
  .primary {
    color: var(--primary-light);
+ }
+ .text-secondary {
+   color: var(--secondary-dark);
  }
