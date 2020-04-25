@@ -1,0 +1,297 @@
+/* ============== ||         -- TABLET & MOBILE *\
+ * ************** || ===========================*|
+ * ============== ||                            */
+ @media only screen and (max-width: 767px) {
+
+}
+
+/* ============== ||             -- TABLET ONLY *\
+ * ************** || ===========================*|
+ * ============== ||                            */
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+
+}
+
+/* ============== ||             -- MOBILE ONLY *\
+ * ************** || ===========================*|
+ * ============== ||                            */
+@media only screen and (max-width: 576px) {
+
+}
+
+
+
+
+
+
+
+
+
+/* ================ ||               -- DESKTOP *\
+ * CUSTOM VARIABLES ||==========================*|
+ * ================ ||                          */
+
+ :root {
+  /* FONT FAMILY */
+  --font-family: 'Source Sans Pro', sans-serif;
+  --font-style: normal;
+  --font-weight-bold: 700;
+  --font-height: 15px;
+
+  /* COLORS */
+  --color-white: #FFFFFF;
+  --primary-light: #C271FF;
+  --primary-dark: #071629;
+  --secondary-dark: rgba(7, 22, 41, 0.501584);
+
+  /* FONT COLORS */
+  --text-light: var(--primary-light);
+  --text-dark: var(--primary-dark);
+  --title-text-color: var(--text-dark);
+  --text-color: var(--secondary-dark);
+  --link-hover-color: var(--primary-light);
+
+  /* FONT SIZES */
+  --font-size-sm: 12px;
+  --font-size-xx-large: 120px;
+  --font-size-x-large: 61px;
+
+  /* BUTTONS */
+  --on-hover: 0.9;
+ }
+
+/* ================ ||               -- DESKTOP *\
+ * TOP LEVEL        ||==========================*|
+ * ================ ||                          */
+
+ html {
+   background-color: black;
+  scroll-behavior: smooth;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: var(--text-color);
+}
+a, a:visited, a:focus, a:target {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+.btn {
+  background-color: var(--primary-light);
+  padding: 0.5rem;
+  border-radius: 3rem;
+  box-shadow: 2px 2px 10px var(--primary-dark);
+  color: var(--color-white);
+}
+.btn:hover {
+  opacity: var(--on-hover);
+}
+[data-section-theme="dark"], [data-section-theme="dark"] {
+  --text-color: var(--color-white);
+  --title-text-color: var(--color-white);
+}
+
+/* ============== ||                 -- DESKTOP *\
+ * HEADER / NAV   || ===========================*|
+ * ============== ||                            */
+
+/* HEADER/HERO BACKGROUND */
+#hero-background {
+  height: 100vh;
+  background-image: url(./images/pic_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-position-y: top;
+ }
+/* HAMBURGER MENU */
+#hamburger__container {
+  position: absolute;
+  top: 3rem;
+  left: 1.5rem;
+}
+#hamburger__checkbox {
+  opacity: 0;
+  position: absolute;
+  top: 2.7rem;
+  left: 1.5rem;
+  height: 8 px;
+  width: 30px;
+  z-index: 100;
+}
+/* NAVBAR */
+#logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 44%;
+}
+#smile, #logo, .profile__pic {
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+}
+#smile {
+  background-image: url(./images/smile_off.png);
+  margin-right: 1rem;
+  height: 40px;
+  width: 50px;
+}
+#logo {
+  background-image: url(./images/logo.png);
+  height: 40px;
+  width: 150px;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+  font-size: var(--font-size-sm);
+  font-style: var(--font-weight-normal);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-height);
+}
+
+
+
+/* ============== ||             -- MOBILE ONLY *\
+ * HEADER / NAV   || ===========================*|
+ * ============== ||                            */
+ @media only screen and (max-width: 576px) {
+  header {}
+  .navbar-nav, .navbar, #logo-container {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin: 0px;
+  }
+  #logo-container, .navbar {
+    height: 8rem;
+    display: flex;
+  }
+  .navbar-nav li {
+    margin: 0.5rem 0 0.5rem;
+  }
+  #hamburger__checkbox:checked ~ header .navbar-nav, .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+  
+  #hamburger__checkbox:checked ~ header .navbar-nav {
+    position: absolute;
+    top: 7rem;
+  }
+
+  #hamburger__patty {
+    display: block;
+    background-color: var(--color-white);
+    width: 13px;
+    height: 2px;
+  }
+  #hamburger__patty:before,
+  #hamburger__patty:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    position: relative;
+    background: var(--color-white);
+  }
+  #hamburger__patty:before {
+    top: -0.4rem;
+  }
+  #hamburger__patty:after {
+    top: 0.25rem;
+  }
+
+}
+
+
+/* ================ ||               -- DESKTOP *\
+ * HERO SECTION     ||==========================*|
+ * ================ ||                          */
+
+ .hero-section {
+   height: 90vh;
+ }
+ .hero__title {
+   height: 40vh;
+ }
+ .hero__title h1 {
+   font-size: var(--font-size-xx-large);
+   text-align: center;
+ }
+ #pros {
+   height: 35vh;
+ }
+ #pros h3 {
+   font-size: 32px;
+   font-weight: normal;
+ }
+ .profile__pic {
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 7rem;
+   width: 7rem;
+   border-radius: 50%;
+ }
+ #person1 .profile__pic {
+  background-image: url(./images/profile_1.jpg);
+ }
+ #person2 .profile__pic {
+  background-image: url(./images/profile_2.jpg);
+ }
+ #person3 .profile__pic {
+  background-image: url(./images/profile_3.jpg);
+ }
+ #person4 .profile__pic {
+  background-image: url(./images/profile_4.jpg);
+ }
+ .profile__info {
+   font-size: 12px;
+ }
+ .break-rows {
+   display: none;
+ }
+
+
+/* ============== ||             -- MOBILE ONLY *\
+* HERO SECTION   || ===========================*|
+* ============== ||                            */
+@media only screen and (max-width: 576px) {
+  .hero__title h1 {
+    font-size: var(--font-size-x-large);
+  }
+  #hamburger__checkbox:checked ~ header .hero-section {
+    margin-top: 6rem;
+  }
+  .break-rows {
+    display: block;
+  }
+  .profile__pic {
+    height: 5rem;
+    width: 5rem;
+  }
+  #hero-background {
+    height: 130vh;
+  }
+}
