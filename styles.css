@@ -65,7 +65,7 @@
  * ================ ||                          */
 
  html {
-   background-color: black;
+   background-color: var(--primary-light);
   scroll-behavior: smooth;
 }
 *, *::after, *::before {
@@ -295,3 +295,12 @@ a:hover {
     height: 130vh;
   }
 }
+/* ============== ||                 -- DESKTOP *\
+ * CAROUSEL       || ===========================*|
+ * ============== ||                            */
+ #carousel {
+   background-color: var(--primary-light);
+ }
+ .prev-arrow-icon {
+   display: none;
+ }
